@@ -2,11 +2,13 @@
 
 title: Lesson 3 - Data cleaning and feature engineering
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "How to prepare data for machine learning algorithms and create new, informative features"
 description: "How to prepare data for machine learning algorithms and create new, informative features"
+nb_path: "notebooks/lesson03_data-cleaning.ipynb"
 ---
 <!--
 
@@ -93,7 +95,7 @@ description: "How to prepare data for machine learning algorithms and create new
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: center">
-{% include image.html max-width="250" file="/dslectures/images/data-cleaning.png" %}
+{% include image.html width="250" max-width="250" file="/dslectures/images/data-cleaning.png" %}
 </div><p>When you receive a new dataset at the beginning of a project, the first task usually involves some form of data cleaning.</p>
 <p>To solve the task at hand, you might need data from multiple sources which you need to combine into one unified table. However, this is usually a tricky task; the different data sources might have different naming conventions, some of them might be human-generated, while others are automatic system reports. A list of things you usually have to go through are the following:</p>
 <ul>
@@ -105,7 +107,7 @@ description: "How to prepare data for machine learning algorithms and create new
 <p>In lesson 2, we examined how to merge the table of housing data with their addresses; in this lesson we will focus on the remainign three steps.</p>
 <p>Although building algorithms that are able to classify data or estimate outcomes is arguably the most interesting part of data science, data cleaning is the one that takes up most of the time. According to a study by <a href="https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/#67beee196f63">CrowdFlower</a>, data scientists spend about 60-80% of their time preparing datasets for machine learning algorithms.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/What-data-scientists-spend-the-most-time-doing.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/What-data-scientists-spend-the-most-time-doing.jpg" %}
 </div>
 </div>
 </div>
@@ -146,8 +148,7 @@ description: "How to prepare data for machine learning algorithms and create new
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reload modules before executing user code</span>
-<span class="o">%</span><span class="k">load_ext</span> autoreload
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
 <span class="c1"># reload all modules every time before executing the Python code</span>
 <span class="o">%</span><span class="k">autoreload</span> 2
 <span class="c1"># render plots in notebook</span>
@@ -168,8 +169,7 @@ description: "How to prepare data for machine learning algorithms and create new
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data wrangling</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span> <span class="nn">dslectures.core</span> <span class="kn">import</span> <span class="o">*</span>
@@ -568,8 +568,7 @@ housing_gmaps_data_raw.csv uc
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use plt.subplots() to create multiple plots</span>
-<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax0</span><span class="p">,</span> <span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax0</span><span class="p">,</span> <span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <span class="c1"># put one plot on axis ax0</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">housing_data</span><span class="p">[</span><span class="s2">&quot;median_house_value&quot;</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax0</span><span class="p">)</span>
 <span class="c1"># put second plot on axis ax1</span>
@@ -742,8 +741,7 @@ dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># compare against numerical column</span>
-<span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;median_house_value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;median_house_value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 
     </div>
@@ -1052,7 +1050,7 @@ Length: 19648, dtype: int8</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h4 id="Exercise-#3">Exercise #3<a class="anchor-link" href="#Exercise-#3"> </a></h4><ul>
-<li>Create a function called <a href="/dslectures/core#convert_strings_to_categories"><code>convert_strings_to_categories</code></a> that takes a <code>pandas.DataFrame</code> as an argument and converts all columns of <code>object</code> type into <code>Categorical</code>. Note that the operation can be done in-place and thus your function should not return any objects. You may find the commands <code>DataFrame.columns</code> and <code>is_numeric_dtype</code> are useful.</li>
+<li>Create a function called <a href="/dslectures/core.html#convert_strings_to_categories"><code>convert_strings_to_categories</code></a> that takes a <code>pandas.DataFrame</code> as an argument and converts all columns of <code>object</code> type into <code>Categorical</code>. Note that the operation can be done in-place and thus your function should not return any objects. You may find the commands <code>DataFrame.columns</code> and <code>is_numeric_dtype</code> are useful.</li>
 <li>Check that the transformed <code>housing_data</code> has the expected data types.</li>
 </ul>
 <hr>
@@ -1338,8 +1336,7 @@ dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculate median total number of bedrooms</span>
-<span class="n">total_bedrooms_median</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;total_bedrooms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_bedrooms_median</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;total_bedrooms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 <span class="c1"># use inplace=True to make replacement in place</span>
 <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;total_bedrooms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">total_bedrooms_median</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># check replacement worked</span>
@@ -1380,7 +1377,7 @@ dtype: int64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h4 id="Exercise-#7">Exercise #7<a class="anchor-link" href="#Exercise-#7"> </a></h4><ul>
-<li>Create a function called <a href="/dslectures/core#fill_missing_values_with_median"><code>fill_missing_values_with_median</code></a> that takes a <code>pandas.DataFrame</code> as an argument and replaces missing values in each column with the median. Note that the operation can be don in-place, so your function should not return any objects. You may find the command <code>is_numeric_dtype</code> to be useful.</li>
+<li>Create a function called <a href="/dslectures/core.html#fill_missing_values_with_median"><code>fill_missing_values_with_median</code></a> that takes a <code>pandas.DataFrame</code> as an argument and replaces missing values in each column with the median. Note that the operation can be don in-place, so your function should not return any objects. You may find the command <code>is_numeric_dtype</code> to be useful.</li>
 <li>Check that missing values are filled in the transformed <code>pandas.DataFrame</code>.</li>
 </ul>
 <hr>
@@ -1408,8 +1405,7 @@ dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add +1 so codes start from 1</span>
-<span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="c1"># check output</span>
 <span class="n">housing_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -1713,8 +1709,7 @@ dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sanity check</span>
-<span class="n">housing_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
     </div>

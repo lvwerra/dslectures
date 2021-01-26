@@ -2,11 +2,13 @@
 
 title: Lesson 10 - Neighbours and clusters
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "Use distance measures to classify and cluster data."
 description: "Use distance measures to classify and cluster data."
+nb_path: "notebooks/lesson10_clusters.ipynb"
 ---
 <!--
 
@@ -60,7 +62,7 @@ description: "Use distance measures to classify and cluster data."
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: center">
-{% include image.html max-width="300" file="/dslectures/images/cluster-cats.png" %}
+{% include image.html width="300" max-width="300" file="/dslectures/images/cluster-cats.png" %}
     <p style="text-align: center;"> <b>Figure:</b> A group of cats is called a cluster. </p>
 </div>
 </div>
@@ -107,8 +109,7 @@ description: "Use distance measures to classify and cluster data."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># uncomment if on your laptop</span>
-<span class="c1"># !pip install --upgrade dslectures</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install --upgrade dslectures</span>
 </pre></div>
 
     </div>
@@ -135,7 +136,7 @@ description: "Use distance measures to classify and cluster data."
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: center">
-{% include image.html max-width="300" file="/dslectures/images/Obsolete_Russian_units_of_length.png" %}
+{% include image.html width="300" max-width="300" file="/dslectures/images/Obsolete_Russian_units_of_length.png" %}
     <p style="text-align: center;"> <b>Figure:</b> Obsolete Russian measures of distance. </p>
 </div><p>See this <a href="https://en.wikipedia.org/wiki/Obsolete_Russian_units_of_measurement">link</a> for more information about obsolete Russian units of measurement.</p>
 <p>In this section we investigate how different measures of distance and similarity behave when more dimensions are added. In machine learning this means that we add more features to the feature matrix. This can have severe implications on the quality of distance measure and methods that rely on it (such as k-nearest neighbour or k-means). This is often called the <strong>curse of dimensionality</strong>.</p>
@@ -301,7 +302,7 @@ description: "Use distance measures to classify and cluster data."
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The iris dataset contains the sepal and petal width of three species of flowers. The three species are Iris setosa, Iris versicolor, and Iris virginica. It is one of the most iconic datasets in machine learning and has been around for more than 80 years! It is still widely used today because of its two features it is easy to visualise and study different algorithms on it. Going beyond 2 or 3 dimensions is very hard to visualise and we will study some methods in the next lesson to break down and visualise high dimensional data. For visualisation purposes we'll use the iris dataset in this lesson to investigate the</p>
 <div style="text-align: center">
-{% include image.html max-width="300" file="/dslectures/images/petal-sepal.jpg" %}
+{% include image.html width="300" max-width="300" file="/dslectures/images/petal-sepal.jpg" %}
     <p style="text-align: center;"> <b>Figure reference:</b> https://en.wikipedia.org/wiki/Petal#/media/File:Petal-sepal.jpg </p>
 </div>
 </div>
@@ -341,8 +342,8 @@ Based on that observation you decide that your flower is a <strong>Iris setosa</
 <li>Use odd number for k to avoid ties</li>
 <li>Voting can be weighted by distance</li>
 </ul>
-<h4 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h4><p>The <code>KNeighborsClassifier</code> interface is the same as the one we have already seen for the Decision Tree and Random Forest classifiers. When initializing the classifier one has to pass the number of neighbours <code>k</code> and can then use the known <code>.fit()</code> and <code>.predict()</code> procedure. We introduce the <a href="/dslectures/core#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to study the behaviour of the classifier more closely. 
-{% include note.html content='The <a href="/dslectures/core#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> function only works in two dimensions.' %}</p>
+<h4 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h4><p>The <code>KNeighborsClassifier</code> interface is the same as the one we have already seen for the Decision Tree and Random Forest classifiers. When initializing the classifier one has to pass the number of neighbours <code>k</code> and can then use the known <code>.fit()</code> and <code>.predict()</code> procedure. We introduce the <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to study the behaviour of the classifier more closely. 
+{% include note.html content='The <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> function only works in two dimensions.' %}</p>
 
 </div>
 </div>
@@ -360,7 +361,7 @@ Based on that observation you decide that your flower is a <strong>Iris setosa</
     <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
     
     <span class="n">plot_classifier_boundaries</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3-Class classification (k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3-Class classification (k = </span><span class="si">{k}</span><span class="s2">)&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -434,7 +435,7 @@ Based on that observation you decide that your flower is a <strong>Iris setosa</
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Excercise-3">Excercise 3<a class="anchor-link" href="#Excercise-3"> </a></h3><p>Use the <a href="/dslectures/core#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to plot the classifier boundaries with the following settings:</p>
+<h3 id="Excercise-3">Excercise 3<a class="anchor-link" href="#Excercise-3"> </a></h3><p>Use the <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to plot the classifier boundaries with the following settings:</p>
 <ul>
 <li><code>RandomForestClassifier(n_estimators=1, max_depth=1)</code></li>
 <li><code>RandomForestClassifier(n_estimators=1, max_depth=2)</code> </li>

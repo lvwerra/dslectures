@@ -2,11 +2,13 @@
 
 title: Lesson 15 - Image classification with deep learning
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "An introduction to Deep Learning and its applications in computer vision."
 description: "An introduction to Deep Learning and its applications in computer vision."
+nb_path: "notebooks/lesson15_cv-deep.ipynb"
 ---
 <!--
 
@@ -70,7 +72,7 @@ description: "An introduction to Deep Learning and its applications in computer 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Goal">Goal<a class="anchor-link" href="#Goal"> </a></h2><p>In this notebook we want to create an image classifier. Images are very common in many areas. Imagine you would have an image of the car available in the Kaggle competition. Such an image could contain a lot of information useful for determining the price of the car. Another example is a automated production line where you need to check that the parts are produced correctly and there are no defects.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="https://github.com/lewtun/dslectures/blob/feat%2Flesson15/notebooks/images/is-this-a-meme.jpg?raw=1" %}
+<img src="https://github.com/lewtun/dslectures/blob/feat%2Flesson15/notebooks/images/is-this-a-meme.jpg?raw=1" width="400" style="max-width: 400px">
 </div>
 </div>
 </div>
@@ -79,7 +81,7 @@ description: "An introduction to Deep Learning and its applications in computer 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Transfer-learning-for-image-classification">Transfer learning for image classification<a class="anchor-link" href="#Transfer-learning-for-image-classification"> </a></h2><p>We will again use the <code>fastai</code> library to build an image classifier with deep learning. The procedure will look very familiar, except that we don't need to fine-tune the classifier. The model we will use was pretrained on the ImageNet dataset, which contains over 14 million images and over 1'000 classes. Training a model on this dataset takes a lot of time. Fortunately, we can re-use the freely available models trained on this dataset to then train new classifiers on other datasets. Because the dataset is so diverse the model learns a lot about the general structure of images.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="https://github.com/lewtun/dslectures/blob/feat%2Flesson15/notebooks/images/imagenet.jpeg?raw=1" %}<p style="text-align: center;"> <b>Reference:</b> http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/ </p>
+<img src="https://github.com/lewtun/dslectures/blob/feat%2Flesson15/notebooks/images/imagenet.jpeg?raw=1" width="400" style="max-width: 400px"><p style="text-align: center;"> <b>Reference:</b> http://karpathy.github.io/2014/09/02/what-i-learned-from-competing-against-a-convnet-on-imagenet/ </p>
 </div><p>The code to train an image classifier should look familiar, since we used a very similar approach in Lesson 13 to train a language model for text classification. The main difference will be the <code>learner</code> which will be a <code>cnn_learner</code>.</p>
 
 </div>
@@ -100,7 +102,7 @@ description: "An introduction to Deep Learning and its applications in computer 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install fastai --no-cache-dir -qq</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -118,7 +120,7 @@ description: "An introduction to Deep Learning and its applications in computer 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Then we can import the <a href="/dslectures/image_downloader#ImageDownloader"><code>ImageDownloader</code></a> and the fastai helper functions.</p>
+<p>Then we can import the <a href="/dslectures/image_downloader.html#ImageDownloader"><code>ImageDownloader</code></a> and the fastai helper functions.</p>
 
 </div>
 </div>
@@ -130,8 +132,7 @@ description: "An introduction to Deep Learning and its applications in computer 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># uncomment if running locally or on Google Colab</span>
-<span class="c1"># !pip install --upgrade dslectures</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install --upgrade dslectures</span>
 </pre></div>
 
     </div>

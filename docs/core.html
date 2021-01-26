@@ -2,11 +2,13 @@
 
 title: Core library
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "Helper functions used throughout the lessons."
 description: "Helper functions used throughout the lessons."
+nb_path: "notebooks/00_core.ipynb"
 ---
 <!--
 
@@ -43,6 +45,31 @@ description: "Helper functions used throughout the lessons."
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_dataset" class="doc_header"><code>get_dataset</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_dataset</code>(<strong><code>dataset_name</code></strong>:<code>str</code>, <strong><code>path</code></strong>=<em><code>'../data/'</code></em>)</p>
+</blockquote>
+<p>Download datasets from Google Drive.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -75,7 +102,7 @@ description: "Helper functions used throughout the lessons."
     <span class="k">if</span> <span class="n">dataset_name</span> <span class="ow">in</span> <span class="n">name_to_id</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">dataset_name</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Dataset already exists at &#39;</span><span class="si">{</span><span class="n">path</span> <span class="o">+</span> <span class="n">dataset_name</span><span class="si">}</span><span class="s2">&#39; and is not downloaded again.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Dataset already exists at &#39;{path + dataset_name}&#39; and is not downloaded again.&quot;</span>
             <span class="p">)</span>
             <span class="k">return</span>
         <span class="k">try</span><span class="p">:</span>
@@ -87,37 +114,12 @@ description: "Helper functions used throughout the lessons."
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something went wrong during download. Try again.&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">e</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Download of </span><span class="si">{</span><span class="n">dataset_name</span><span class="si">}</span><span class="s2"> dataset complete.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Download of </span><span class="si">{dataset_name}</span><span class="s2"> dataset complete.&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;File not on Google Drive.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_dataset" class="doc_header"><code>get_dataset</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_dataset</code>(<strong><code>dataset_name</code></strong>:<code>str</code>, <strong><code>path</code></strong>=<em><code>'../data/'</code></em>)</p>
-</blockquote>
-<p>Download datasets from Google Drive.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -673,6 +675,36 @@ description: "Helper functions used throughout the lessons."
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="rmse" class="doc_header"><code>rmse</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L67" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rmse</code>(<strong><code>y</code></strong>, <strong><code>yhat</code></strong>)</p>
+</blockquote>
+<p>A utility function to calculate the Root Mean Square Error (RMSE).</p>
+<p>Args:
+    y (array): Actual values for target.
+    yhat (array): Predicted values for target.</p>
+<p>Returns:
+    rmse (double): The RMSE.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -691,36 +723,6 @@ description: "Helper functions used throughout the lessons."
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="rmse" class="doc_header"><code>rmse</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L67" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rmse</code>(<strong><code>y</code></strong>, <strong><code>yhat</code></strong>)</p>
-</blockquote>
-<p>A utility function to calculate the Root Mean Square Error (RMSE).</p>
-<p>Args:
-    y (array): Actual values for target.
-    yhat (array): Predicted values for target.</p>
-<p>Returns:
-    rmse (double): The RMSE.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -771,6 +773,31 @@ description: "Helper functions used throughout the lessons."
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="convert_strings_to_categories" class="doc_header"><code>convert_strings_to_categories</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>convert_strings_to_categories</code>(<strong><code>df</code></strong>)</p>
+</blockquote>
+<p>A utility function to convert all string columns to Categorical data type.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -783,31 +810,6 @@ description: "Helper functions used throughout the lessons."
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="convert_strings_to_categories" class="doc_header"><code>convert_strings_to_categories</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>convert_strings_to_categories</code>(<strong><code>df</code></strong>)</p>
-</blockquote>
-<p>A utility function to convert all string columns to Categorical data type.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1048,6 +1050,31 @@ dtype: int8</pre>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="fill_missing_values_with_median" class="doc_header"><code>fill_missing_values_with_median</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L87" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fill_missing_values_with_median</code>(<strong><code>df</code></strong>)</p>
+</blockquote>
+<p>Replaces missing values in numerical columns with the median.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -1062,31 +1089,6 @@ dtype: int8</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="fill_missing_values_with_median" class="doc_header"><code>fill_missing_values_with_median</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L87" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fill_missing_values_with_median</code>(<strong><code>df</code></strong>)</p>
-</blockquote>
-<p>Replaces missing values in numerical columns with the median.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1288,6 +1290,38 @@ dtype: int8</pre>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="make_polynomial_data" class="doc_header"><code>make_polynomial_data</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L96" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>make_polynomial_data</code>(<strong><code>weight</code></strong>, <strong><code>n_samples</code></strong>=<em><code>100</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+</blockquote>
+<p>Creates noisy polynomial data.</p>
+<p>Args:
+    weight (array): polynomial weights in descending order
+    n_samples (int): number of samples
+    seed (int): random seed</p>
+<p>returns:
+    x (array): x-values
+    y (array): y-values</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -1325,38 +1359,6 @@ dtype: int8</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="make_polynomial_data" class="doc_header"><code>make_polynomial_data</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L96" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>make_polynomial_data</code>(<strong><code>weight</code></strong>, <strong><code>n_samples</code></strong>=<em><code>100</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
-</blockquote>
-<p>Creates noisy polynomial data.</p>
-<p>Args:
-    weight (array): polynomial weights in descending order
-    n_samples (int): number of samples
-    seed (int): random seed</p>
-<p>returns:
-    x (array): x-values
-    y (array): y-values</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1428,6 +1430,31 @@ dtype: int8</pre>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="PolynomialRegressor" class="doc_header"><code>class</code> <code>PolynomialRegressor</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L129" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PolynomialRegressor</code>(<strong><code>degree</code></strong>=<em><code>0</code></em>, <strong><code>w_hat</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+<p>Scikit-like interface to fit polynomials.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -1475,31 +1502,6 @@ dtype: int8</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="PolynomialRegressor" class="doc_header"><code>class</code> <code>PolynomialRegressor</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L129" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PolynomialRegressor</code>(<strong><code>degree</code></strong>=<em><code>0</code></em>, <strong><code>w_hat</code></strong>=<em><code>None</code></em>)</p>
-</blockquote>
-<p>Scikit-like interface to fit polynomials.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1572,7 +1574,7 @@ dtype: int8</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE: </span><span class="si">{</span><span class="n">pf</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE: {pf.evaluate(x, y):.3f}&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1599,6 +1601,31 @@ dtype: int8</pre>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="display_large" class="doc_header"><code>display_large</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L171" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>display_large</code>(<strong><code>df</code></strong>)</p>
+</blockquote>
+<p>Displays up to 1000 columns and rows of pandas.DataFrame or pandas.Series objects.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -1610,31 +1637,6 @@ dtype: int8</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="display_large" class="doc_header"><code>display_large</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L171" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>display_large</code>(<strong><code>df</code></strong>)</p>
-</blockquote>
-<p>Displays up to 1000 columns and rows of pandas.DataFrame or pandas.Series objects.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -2021,6 +2023,31 @@ dtype: int8</pre>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="rf_feature_importance" class="doc_header"><code>rf_feature_importance</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L177" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rf_feature_importance</code>(<strong><code>fitted_model</code></strong>, <strong><code>df</code></strong>)</p>
+</blockquote>
+<p>Creates a pandas.Dataframe of a Random Forest's feature importance per column.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
@@ -2039,6 +2066,12 @@ dtype: int8</pre>
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-visualisation">Data visualisation<a class="anchor-link" href="#Data-visualisation"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2050,9 +2083,8 @@ dtype: int8</pre>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="rf_feature_importance" class="doc_header"><code>rf_feature_importance</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L177" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rf_feature_importance</code>(<strong><code>fitted_model</code></strong>, <strong><code>df</code></strong>)</p>
+<h4 id="plot_feature_importance" class="doc_header"><code>plot_feature_importance</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L184" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_feature_importance</code>(<strong><code>feature_importance</code></strong>)</p>
 </blockquote>
-<p>Creates a pandas.Dataframe of a Random Forest's feature importance per column.</p>
 
 </div>
 
@@ -2064,12 +2096,6 @@ dtype: int8</pre>
 </div>
     {% endraw %}
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-visualisation">Data visualisation<a class="anchor-link" href="#Data-visualisation"> </a></h2>
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2100,8 +2126,9 @@ dtype: int8</pre>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_feature_importance" class="doc_header"><code>plot_feature_importance</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L184" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_feature_importance</code>(<strong><code>feature_importance</code></strong>)</p>
+<h4 id="plot_dendogram" class="doc_header"><code>plot_dendogram</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L189" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_dendogram</code>(<strong><code>X</code></strong>)</p>
 </blockquote>
+<p>Plots a dendogram to see which features are related.</p>
 
 </div>
 
@@ -2154,9 +2181,9 @@ dtype: int8</pre>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_dendogram" class="doc_header"><code>plot_dendogram</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L189" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_dendogram</code>(<strong><code>X</code></strong>)</p>
+<h4 id="plot_fitting_graph" class="doc_header"><code>plot_fitting_graph</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L205" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_fitting_graph</code>(<strong><code>x</code></strong>, <strong><code>metric_train</code></strong>, <strong><code>metric_valid</code></strong>, <strong><code>metric_name</code></strong>=<em><code>'metric'</code></em>, <strong><code>xlabel</code></strong>=<em><code>'x'</code></em>, <strong><code>yscale</code></strong>=<em><code>'linear'</code></em>)</p>
 </blockquote>
-<p>Plots a dendogram to see which features are related.</p>
+<p>Plot fitting graph for train and validation metrics.</p>
 
 </div>
 
@@ -2205,9 +2232,12 @@ dtype: int8</pre>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_fitting_graph" class="doc_header"><code>plot_fitting_graph</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L205" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_fitting_graph</code>(<strong><code>x</code></strong>, <strong><code>metric_train</code></strong>, <strong><code>metric_valid</code></strong>, <strong><code>metric_name</code></strong>=<em><code>'metric'</code></em>, <strong><code>xlabel</code></strong>=<em><code>'x'</code></em>, <strong><code>yscale</code></strong>=<em><code>'linear'</code></em>)</p>
+<h4 id="plot_classifier_boundaries" class="doc_header"><code>plot_classifier_boundaries</code><a href="https://github.com/lvwerra/dslectures/tree/master/dslectures/core.py#L217" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_classifier_boundaries</code>(<strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>clf</code></strong>)</p>
 </blockquote>
-<p>Plot fitting graph for train and validation metrics.</p>
+<p>Given features X and labels y along with classifier, plot decision boundaries in two dimensions.</p>
+<p>Args:
+    X: feature array of shape (n_samples, n_features)
+    y: label array of shape (n_samples)</p>
 
 </div>
 
@@ -2257,34 +2287,6 @@ dtype: int8</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_classifier_boundaries" class="doc_header"><code>plot_classifier_boundaries</code><a href="https://github.com/lewtun/dslectures/tree/master/dslectures/core.py#L217" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_classifier_boundaries</code>(<strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>clf</code></strong>)</p>
-</blockquote>
-<p>Given features X and labels y along with classifier, plot decision boundaries in two dimensions.</p>
-<p>Args:
-    X: feature array of shape (n_samples, n_features)
-    y: label array of shape (n_samples)</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 

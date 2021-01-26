@@ -1,61 +1,50 @@
-repository: fastai/nbdev
-output: web
-topnav_title: dslectures
-site_title: dslectures
-company_name: fast.ai
-description: Writing a library entirely in notebooks
-google_search: 000837339549978028235:vh0pq0omtgr
-use_math: true
-google_analytics:
-twitter_username: fastdotai
-
-host: 127.0.0.1
-# the preview server used. Leave as is.
-port: 4000
-# the port where the preview is rendered.
-
-exclude:
-  - .idea/
-  - .gitignore
-  - vendor
- 
-exclude: [vendor]
-
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  math_engine: katex
-  input: GFM
-  auto_ids: true
-  hard_wrap: false
-  syntax_highlighter: rouge
-
+baseurl: /dslectures/
 collections:
   tooltips:
     output: false
-
+company_name: fast.ai
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      sidebar: home_sidebar
-      topnav: topnav
-  -
-    scope:
-      path: ""
-      type: "tooltips"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-
-sidebars: [home_sidebar]
+- scope:
+    path: ''
+    type: pages
+  values:
+    comments: true
+    layout: page
+    search: true
+    sidebar: home_sidebar
+    topnav: topnav
+- scope:
+    path: ''
+    type: tooltips
+  values:
+    comments: true
+    layout: page
+    search: true
+    tooltip: true
+description: Writing a library entirely in notebooks
+exclude:
+- vendor
+google_analytics: null
+google_search: 000837339549978028235:vh0pq0omtgr
+highlighter: rouge
+host: 127.0.0.1
+kramdown:
+  auto_ids: true
+  hard_wrap: false
+  input: GFM
+  math_engine: katex
+  syntax_highlighter: rouge
+markdown: kramdown
+output: web
 permalink: pretty
-baseurl: /dslectures/
-#theme: jekyll-theme-cayman
+plugins:
+- jekyll-remote-theme
+port: 4000
+remote_theme: fastai/nbdev-jekyll-theme
+repository: fastai/nbdev
+sidebars:
+- home_sidebar
+site_title: dslectures
+topnav_title: dslectures
+twitter_username: fastdotai
+use_math: true

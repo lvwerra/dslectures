@@ -16,7 +16,7 @@ large volumes of data, in order to improve business decision-making (Provost & F
 There are many challenges involved with making data science an effective component of a business, but for those that succeed (Google, Amazon, Facebook, LinkedIn) the rewards are immense.
 
 <div style="text-align: center">
-<img src="notebooks/images/ddd.png" width="400">
+<img src="notebooks/images/ddd.png" width="400" style="max-width: 400px">
 <p style="text-align: center;"> <b>Figure:</b> Data science in the context of various data-related processes in the organization (Provost and Fawcett, 2013). </p>
 </div>
 
@@ -81,7 +81,7 @@ A few remarks about Binder:
 Since Binder does not save your changes permanently, you should download the notebooks you worked on at the end of your session. If you want to continue your session later on you can re-upload them to Binder. See the image below for instructions how to upload and download files.
 
 <div style="text-align: center">
-<img src="notebooks/images/binder-download-upload.png" width="800">
+<img src="notebooks/images/binder-download-upload.png" width="800" style="max-width: 800px">
 <p style="text-align: center;"> <b>Figure:</b> Download and upload buttons on JupyterLab as seen in the binder environment. </p>
 </div>
 

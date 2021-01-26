@@ -2,11 +2,13 @@
 
 title: Python primer
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "An overview of the basics of Python as well as Jupyter notebooks and how they can be a useful tool for data science."
 description: "An overview of the basics of Python as well as Jupyter notebooks and how they can be a useful tool for data science."
+nb_path: "notebooks/python-primer.ipynb"
 ---
 <!--
 
@@ -48,7 +50,7 @@ description: "An overview of the basics of Python as well as Jupyter notebooks a
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Why-Python-for-Data-Analysis?">Why Python for Data Analysis?<a class="anchor-link" href="#Why-Python-for-Data-Analysis?"> </a></h2><div style="text-align: center">
-{% include image.html max-width="700" file="/dslectures/./images/python_growth.png" %}
+{% include image.html width="700" max-width="700" file="/dslectures/./images/python_growth.png" %}
 </div><p>Python is currently one of the <a href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/">fastest growing programming languages</a> in the world. There are many reasons for this trend, but it largely comes down to the fact that Python is easy to learn, has a library or framework for almost everything, and has a large and active community of developers in scientific computing and data analysis. (This last point is very important: if you get stuck, there's a good chance that somebody has already asked your question on <a href="https://stackoverflow.com/">StackOverflow</a>!)</p>
 <p>These features have led Python to become one of the most important languages in data science, machine learning, and general software development in academia and industry. Thus, if you're going to learn a new programming language in 2020, then Python is a great choice!</p>
 <h3 id="But-I-don't-know-how-to-program!">But I don't know how to program!<a class="anchor-link" href="#But-I-don't-know-how-to-program!"> </a></h3><div style="text-align: center">
@@ -121,8 +123,7 @@ Jupyter notebooks are made of <em>cells</em> and there are two basic types of ce
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tab complete</span>
-<span class="n">the_beatles</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_beatles</span>
 </pre></div>
 
     </div>
@@ -1006,8 +1007,7 @@ o
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace all instances of one substring with another</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hitchhiker&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hitchhiker&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;ma&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -1722,7 +1722,7 @@ monkey
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">animals</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;#{idx + 1}: </span><span class="si">{animal}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2019,7 +2019,7 @@ monkey
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;person&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;spider&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
     <span class="n">legs</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">animal</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s1"> has </span><span class="si">{</span><span class="n">legs</span><span class="si">}</span><span class="s1"> legs&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A </span><span class="si">{animal}</span><span class="s1"> has </span><span class="si">{legs}</span><span class="s1"> legs&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2054,7 +2054,7 @@ A spider has 8 legs
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;person&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;spider&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">animal</span><span class="p">,</span> <span class="n">legs</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s1"> has </span><span class="si">{</span><span class="n">legs</span><span class="si">}</span><span class="s1"> legs&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A </span><span class="si">{animal}</span><span class="s1"> has </span><span class="si">{legs}</span><span class="s1"> legs&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -3466,8 +3466,7 @@ G&#39;day, FRED!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># initialise input variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
 

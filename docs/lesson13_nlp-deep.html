@@ -2,11 +2,13 @@
 
 title: Lesson 13 - NLP with Deep Learning
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "An introduction to Deep Learning and its applications in NLP"
 description: "An introduction to Deep Learning and its applications in NLP"
+nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 ---
 <!--
 
@@ -74,10 +76,10 @@ description: "An introduction to Deep Learning and its applications in NLP"
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>Last time we built a sentiment classifier with <code>scikit-learn</code> and achieved around 85% accuracy on the test set. This is already pretty good, but can we do better? We are still wrong 15/100 times. It turns out we can if we use deep learning.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/deeper.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/deeper.jpg" %}
 </div><p>Deep learning uses an architecture that is modeled after the brain and uses networks of artificial neurons to mimic its behaviour. These models are much bigger than the models we encountered so far and can have millions to billions of parameters. Training these models and adjusting the parameters is also more challenging, and generally requires much more data and compute. A lot of computations are easily parallelizable, which is a strength of modern GPUs. Therefore we will run this notebook on a GPU that enables much faster training than a CPU.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/gpu_meme.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/gpu_meme.jpg" %}
 </div><p>Since we don't have much training data on the IMDb dataset for deep learning standards we use transfer learning to still achieve high accuracy in predicting the sentiment of the movie reviews.</p>
 
 </div>
@@ -112,7 +114,7 @@ description: "An introduction to Deep Learning and its applications in NLP"
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Three-steps">Three steps<a class="anchor-link" href="#Three-steps"> </a></h4><p>The three steps are visualised in the following figure:</p>
 <div style="text-align: center">
-{% include image.html max-width="800" file="/dslectures/images/ulmfit_approach.png" %}
+{% include image.html width="800" max-width="800" file="/dslectures/images/ulmfit_approach.png" %}
 </div><ol>
 <li><p><strong>Language model (wiki)</strong>: A language model is trained on a large dataset. Wikipedia is a common choice for this task as it includes many topics, and the text is of high quality. This step usually takes the most time on the order of days. In this step, the model learns the general structure of language.</p>
 </li>
@@ -648,7 +650,7 @@ description: "An introduction to Deep Learning and its applications in NLP"
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Train-model">Train model<a class="anchor-link" href="#Train-model"> </a></h3><p>We will train a variant of a model called LSTM (long short-term memory) network. This is a neural network with a feedback loop. That means that when fed a sequence of tokens, it feeds back its output for the next prediction. With this the model has a mechanism remembering the past inputs. This is especially useful when dealing with sequential data such as texts, where the sequence of words and characters carries important meaning.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/rnn-diagram.png" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/rnn-diagram.png" %}
     <p style="text-align: center;"> <b>Reference:</b> https://colah.github.io/posts/2015-08-Understanding-LSTMs/ </p>
 </div>
 </div>
@@ -1020,8 +1022,7 @@ description: "An introduction to Deep Learning and its applications in NLP"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># uncomment if you want to fine-tune the language mode</span>
-<span class="c1"># data_lm.path = Path(&#39;&#39;)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data_lm.path = Path(&#39;&#39;)</span>
 <span class="c1"># data_lm.save(&#39;data_lm.pkl&#39;)</span>
 <span class="c1"># learn.save(&#39;fine_tuned&#39;)</span>
 </pre></div>

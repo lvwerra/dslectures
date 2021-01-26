@@ -2,11 +2,13 @@
 
 title: Lesson 2 - Exploratory data analysis
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "A walkthrough on the fundamental mechanics to manipulate the data contained in pandas Series or DataFrame objects."
 description: "A walkthrough on the fundamental mechanics to manipulate the data contained in pandas Series or DataFrame objects."
+nb_path: "notebooks/lesson02_exploratory-data-analysis.ipynb"
 ---
 <!--
 
@@ -95,7 +97,7 @@ description: "A walkthrough on the fundamental mechanics to manipulate the data 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/data-exploration.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/data-exploration.jpg" %}
 </div><p>In data science we apply the scientific method to data with the goal gain insights. This means that we state a hypothesis about the data, test it and refine it if necessary. In this framework, exploratory data analysis (EDA) is the step where we explore the data before actually building models. This helps us understand what information is actually contained in the data and what insights could be gained from it.</p>
 <p>Formally, the goals of EDA are:</p>
 <ul>
@@ -153,8 +155,7 @@ description: "A walkthrough on the fundamental mechanics to manipulate the data 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reload modules before executing user code</span>
-<span class="o">%</span><span class="k">load_ext</span> autoreload
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
 <span class="c1"># reload all modules every time before executing the Python code</span>
 <span class="o">%</span><span class="k">autoreload</span> 2
 <span class="c1"># render plots in notebook</span>
@@ -175,8 +176,7 @@ description: "A walkthrough on the fundamental mechanics to manipulate the data 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data wrangling</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span> <span class="nn">dslectures.core</span> <span class="kn">import</span> <span class="o">*</span>
@@ -543,8 +543,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get number of rows</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">housing_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">housing_addresses</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">housing_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">housing_addresses</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -577,8 +576,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get tuples of (n_rows, n_columns)</span>
-<span class="n">housing_data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">housing_addresses</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">housing_addresses</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
     </div>
@@ -683,8 +681,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check that the renaming worked</span>
-<span class="n">housing_addresses</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_addresses</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -1079,8 +1076,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create new column</span>
-<span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;latitude_longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;latitude_longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="c1"># check the column was created</span>
 <span class="n">housing_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -1238,8 +1234,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a new DataFrame from the merge</span>
-<span class="n">housing_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
     <span class="n">housing_data</span><span class="p">,</span> <span class="n">housing_addresses</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;latitude_longitude&quot;</span>
 <span class="p">)</span>
 <span class="c1"># check merge worked</span>
@@ -1427,7 +1422,7 @@ housing_backup.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><br>
-{% include image.html max-width="800" file="/dslectures/images/joins.png" %}</p>
+{% include image.html width="800" max-width="800" file="/dslectures/images/joins.png" %}</p>
 <p style="text-align: center;"> <b>Figure:</b> Graphical representation of the different types of merges between two DataFrames df1 and df2 that are possible in pandas. </p>
 </div>
 </div>
@@ -1459,8 +1454,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># inplace=True manipulates an object without returning a new object</span>
-<span class="n">housing_merged</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;latitude_longitude&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span> <span class="n">housing_merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_merged</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;latitude_longitude&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span> <span class="n">housing_merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -1617,7 +1611,7 @@ housing_backup.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><br>
-{% include image.html max-width="700" file="/dslectures/./images/dataframe-series-axes.png" %}</p>
+{% include image.html width="700" max-width="700" file="/dslectures/./images/dataframe-series-axes.png" %}</p>
 <p style="text-align: center;"> <b>Figure:</b> Visualisation of the <code>axis</code> parameter in pandas. </p>
 </div>
 </div>
@@ -1642,8 +1636,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use index=False to avoid adding an extra column for the index</span>
-<span class="n">housing_merged</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">DATA</span><span class="o">/</span><span class="s1">&#39;housing_merged.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">housing_merged</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">DATA</span><span class="o">/</span><span class="s1">&#39;housing_merged.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1686,8 +1679,7 @@ housing_backup.csv
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># define a new Series object </span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">housing_merged</span><span class="p">[</span><span class="s1">&#39;housing_median_age&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">housing_merged</span><span class="p">[</span><span class="s1">&#39;housing_median_age&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1748,8 +1740,7 @@ Name: housing_median_age, Length: 20640, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get first entry</span>
-<span class="n">age</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1782,8 +1773,7 @@ Name: housing_median_age, Length: 20640, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># slicing by index</span>
-<span class="n">age</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -1819,8 +1809,7 @@ Name: housing_median_age, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># slice and just get values</span>
-<span class="n">age</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 
     </div>
@@ -1894,8 +1883,7 @@ Name: housing_median_age, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># masking (filtering)</span>
-<span class="n">age</span><span class="p">[(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mf">20.0</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">[(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mf">10.0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mf">20.0</span><span class="p">)]</span>
 </pre></div>
 
     </div>
@@ -1939,8 +1927,7 @@ Name: housing_median_age, Length: 4259, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fancy indexing</span>
-<span class="n">age</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 </pre></div>
 
     </div>
@@ -3120,8 +3107,7 @@ Name: city, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use outer parentheses () to add line breaks</span>
-<span class="n">top10_largest_cities</span> <span class="o">=</span> <span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top10_largest_cities</span> <span class="o">=</span> <span class="p">(</span>
     <span class="c1"># group by key=city</span>
     <span class="n">housing_merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span>
     <span class="c1"># calculate total population</span>
@@ -3274,7 +3260,7 @@ Once the split done, a function is <em>applied</em> to each group, producing a n
 Finally, the results of all those function applications are <em>combined</em> into a result object. The form of the resulting object will usualy depend on the what's being done to the data.</p>
 <p>See the figure below for an example of a simple group aggregation.</p>
 <p><br>
-{% include image.html max-width="600" file="/dslectures/./images/split-apply-combine.png" %}</p>
+{% include image.html width="600" max-width="600" file="/dslectures/./images/split-apply-combine.png" %}</p>
 <p style="text-align: center;"> <b>Figure:</b> Illustraion of a group aggregation. </p><p>In general, the grouping key can take many forms and the key do not have to be all of the same type. Frequently, the grouping information is found in the same <code>pandas.DataFrame</code> as the data you want to work on, so the key is usually a <em>column name</em>. For example let's create a simple <code>pandas.DataFrame</code> as follows:</p>
 
 </div>

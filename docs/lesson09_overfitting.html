@@ -2,11 +2,13 @@
 
 title: Lesson 9 - Overfitting
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "What is overfitting and how can it be avoided?"
 description: "What is overfitting and how can it be avoided?"
+nb_path: "notebooks/lesson09_overfitting.ipynb"
 ---
 <!--
 
@@ -59,7 +61,7 @@ description: "What is overfitting and how can it be avoided?"
 <blockquote><p>With four parameters I can fit an elephant, and with five I can make him wiggle his trunk.</p>
 <p>- John von Neumann</p>
 </blockquote>
-<div style="text-align:center">{% include image.html max-width="300" file="/dslectures/images/elephant.jpg" %}
+<div style="text-align:center">{% include image.html width="300" max-width="300" file="/dslectures/images/elephant.jpg" %}
     <p style="text-align: center;"> <b>Figure reference:</b>Irrelevant image. </p>
 </div><p>When we fit a model to data we always have to be careful not to overfit. If we overfit the model this means that the model learned specific aspects of the training data and does not <em>generalise</em> to new, unseen data. Instead of learning useful relations between the input feature and the target the model has memorised the training samples. If this happens the model we perform very poorly on new data and therefore we want to make sure this does not happen.</p>
 <p>Fortunately, there are tools that can help detect and avoid overfitting. One tool we already used: splitting the data into two sets. Measuring the performance difference between the training and validation set already helps identifying when we are overfitting. In this lecture we will see an even more systematic way of splitting the data namely <em>cross-validation</em>.</p>
@@ -80,8 +82,7 @@ description: "What is overfitting and how can it be avoided?"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reload modules before executing user code</span>
-<span class="o">%</span><span class="k">load_ext</span> autoreload
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
 <span class="c1"># reload all modules every time before executing Python code</span>
 <span class="o">%</span><span class="k">autoreload</span> 2
 <span class="c1"># render plots in notebook</span>
@@ -544,7 +545,7 @@ If you are interested in creating or fitting polynomial data check out the funct
     <span class="n">pr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="n">y_fit</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_lin</span><span class="p">)</span>
     
-    <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Polynomial fit degree=</span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Polynomial fit degree=</span><span class="si">{degree}</span><span class="s1">&#39;</span>
     <span class="n">scatter_plot_polynomial</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;polynomial data&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
     <span class="n">scatter_plot_polynomial</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;validation set&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_lin</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
@@ -785,7 +786,7 @@ The model starts fitting the noise in the dataset. While the fit for the trainin
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Cross-validation">Cross-validation<a class="anchor-link" href="#Cross-validation"> </a></h3><p>The idea behind cross validation is to split the data into k equally sized parts, called folds. Each fold gets to be the validation set once while the other folds play the training set part. That means we run k experiments and aggregate the training and validation metrics by averaging them. This is a more robust approach to monitoring overfitting and thanks to <code>scikit-learn</code> we only have to adjust one line by adding the <code>cross_validate</code> function!</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/cross-val.png" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/cross-val.png" %}
     <p style="text-align: center;"> <b>Figure reference:</b> https://scikit-learn.org/stable/modules/cross_validation.html </p>
 </div>
 </div>

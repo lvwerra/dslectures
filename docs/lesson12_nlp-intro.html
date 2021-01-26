@@ -2,11 +2,13 @@
 
 title: Lesson 12 - Introduction to NLP
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "Introduction to Natural Language Processing (NLP)."
 description: "Introduction to Natural Language Processing (NLP)."
+nb_path: "notebooks/lesson12_nlp-intro.ipynb"
 ---
 <!--
 
@@ -48,7 +50,7 @@ description: "Introduction to Natural Language Processing (NLP)."
 </ul>
 <h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2><p>As homework read the references, work carefully through the notebook and solve the exercises.</p>
 <h2 id="Introduction-to-NLP">Introduction to NLP<a class="anchor-link" href="#Introduction-to-NLP"> </a></h2><div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/natural-language-processing-so-hot-right-now.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/natural-language-processing-so-hot-right-now.jpg" %}
 </div><p>Natural language processing (NLP) concerns the part of Machine Learning about the analysis of digital, human written texts. The topic of NLP is as old as machine learning itself and dates back to Alan Turing himself. Since text is a widely used medium there are plenty of applications of machine learning:</p>
 <ul>
 <li>Text classification</li>
@@ -61,11 +63,11 @@ description: "Introduction to Natural Language Processing (NLP)."
 <p>Especially in the past few years there has been exciting and rapid progress in the field. One example is the release of OpenAI's GPT-2, a language model able to not only create realistic text samples but also solve tasks of many NLP benchmarks without special training. See the figure below for an example output of GPT-2.</p>
 <p>If you want to try your own examples you can do so at <a href="https://talktotransformer.com/">talktotransformer.com</a> or read the original article on <a href="https://openai.com/blog/better-language-models/">OpenAI's webpage</a>.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/gpt2-example.png" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/gpt2-example.png" %}
 </div><p>Natural text is different to other data sources such as numerical tables or images. One way to look at text is to consider each word to be a feature. Since most languages have of the order of 100k words in their vocabulary plus many variations this leads to an enormous feature space. At the same time most words in the vocabulary do not appear in a small text. This leads to extreme sparsity. These properties call for a different approach to NLP than the methods we encountered and used for tabular data.</p>
 <h2 id="Notebook-overview">Notebook overview<a class="anchor-link" href="#Notebook-overview"> </a></h2><p>The goal of this notebook is to classify movie reviews in terms of positive or negative feedback. This task is called sentiment analysis and is a common NLP application. As a company you might use a sentiment classifier to analyse customer feedback or detect toxic comments on your website.</p>
 <div style="text-align: center">
-{% include image.html max-width="400" file="/dslectures/images/sentiment-meme.jpg" %}
+{% include image.html width="400" max-width="400" file="/dslectures/images/sentiment-meme.jpg" %}
 </div><p>Text data can be messy and require some clean up. The specific steps for the clean-up can depend on how the data was generated or where it was found. Text from the web might have some html artifacts that need cleaning or product reviews could include meta information on the review. Python offers powerful tools to manipulate strings. If cleaning requires complex rules one can also resort to regular expressions or regex for short.</p>
 <p>Once the text is cleaned we have to encode it in a way that machine learning methods can handle. Directly using text representation as input is not possible. Most machine learning methods can only handle numerical data such as vectors and matrices. So we have to encode the input texts as vectors or matrices. These text representations are called vector encodings. Furthermore, we look at n-grams to keep some of the sequential structure of text.</p>
 <p>Finally, we can train a model to classify the movie review texts. However, the Random Forest models we already know well do not work well for the high-dimensional data. We introduce a new methods that is common for text data called the Naïve Bayes classifier that utilises Bayes theorem.</p>
@@ -117,24 +119,6 @@ description: "Introduction to Natural Language Processing (NLP)."
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[nltk_data] Downloading package stopwords to
-[nltk_data]     /Users/lewtun/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
-[nltk_data] Downloading package punkt to /Users/lewtun/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
