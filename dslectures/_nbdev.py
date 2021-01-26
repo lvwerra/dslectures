@@ -31,8 +31,8 @@ modules = ["core.py",
            "structured.py",
            "image_downloader.py"]
 
-doc_url = "https://lewtun.github.io/dslectures/"
+doc_url = "https://lvwerra.github.io/dslectures/"
 
-git_url = "https://github.com/lewtun/dslectures/tree/master/"
+git_url = "https://github.com/lvwerra/dslectures/tree/master/"
 
 def custom_doc_links(name): return None
