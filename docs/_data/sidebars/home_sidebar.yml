@@ -11,61 +11,61 @@ entries:
       url: /
     - output: web,pdf
       title: Core library
-      url: core.html
+      url: core
     - output: web,pdf
       title: fast.ai helper functions
-      url: structured.html
+      url: structured
     - output: web,pdf
       title: Image downloader
-      url: image_downloader.html
+      url: image_downloader
     - output: web,pdf
       title: Lesson 1 - Introduction to pandas and seaborn
-      url: lesson01_intro-to-pandas.html
+      url: lesson01_intro-to-pandas
     - output: web,pdf
       title: Lesson 2 - Exploratory data analysis
-      url: lesson02_exploratory-data-analysis.html
+      url: lesson02_exploratory-data-analysis
     - output: web,pdf
       title: Lesson 3 - Data cleaning and feature engineering
-      url: lesson03_data-cleaning.html
+      url: lesson03_data-cleaning
     - output: web,pdf
       title: Lesson 4 - Introduction to random forests
-      url: lesson04_intro-to-random-forests.html
+      url: lesson04_intro-to-random-forests
     - output: web,pdf
       title: Lesson 5 - Random forest deep dive
-      url: lesson05_random-forest-deep-dive.html
+      url: lesson05_random-forest-deep-dive
     - output: web,pdf
       title: Lesson 6 - Model interpretability
-      url: lesson06_model-interpretation.html
+      url: lesson06_model-interpretation
     - output: web,pdf
       title: Lesson 7 - Classification
-      url: lesson07_classification.html
+      url: lesson07_classification
     - output: web,pdf
       title: Lesson 8 - Group project
-      url: lesson08_group-project.html
+      url: lesson08_group-project
     - output: web,pdf
       title: Lesson 9 - Overfitting
-      url: lesson09_overfitting.html
+      url: lesson09_overfitting
     - output: web,pdf
       title: Lesson 10 - Neighbours and clusters
-      url: lesson10_clusters.html
+      url: lesson10_clusters
     - output: web,pdf
       title: Lesson 11 - Dimensions and visualisation
-      url: lesson11_visualisation.html
+      url: lesson11_visualisation
     - output: web,pdf
       title: Lesson 12 - Introduction to NLP
-      url: lesson12_nlp-intro.html
+      url: lesson12_nlp-intro
     - output: web,pdf
       title: Lesson 13 - NLP with Deep Learning
-      url: lesson13_nlp-deep.html
+      url: lesson13_nlp-deep
     - output: web,pdf
       title: Lesson 14 - Create an image dataset
-      url: lesson14_image-dataset.html
+      url: lesson14_image-dataset
     - output: web,pdf
       title: Lesson 15 - Image classification with deep learning
-      url: lesson15_cv-deep.html
+      url: lesson15_cv-deep
     - output: web,pdf
       title: Python primer
-      url: python-primer.html
+      url: python-primer
     output: web
     title: dslectures
   output: web
