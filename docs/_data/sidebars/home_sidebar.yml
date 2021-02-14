@@ -10,62 +10,62 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Core library
-      url: core
+      title: 'Lesson 0: Python Primer'
+      url: lesson00-python-primer.html
     - output: web,pdf
-      title: fast.ai helper functions
-      url: structured
+      title: Lesson 1 - Pandas and Seaborn
+      url: lesson01_intro-to-pandas.html
     - output: web,pdf
-      title: Image downloader
-      url: image_downloader
+      title: Lesson 2 - Exploratory Data Analysis
+      url: lesson02_exploratory-data-analysis.html
     - output: web,pdf
-      title: Lesson 1 - Introduction to pandas and seaborn
-      url: lesson01_intro-to-pandas
+      title: Lesson 3 - Feature Engineering
+      url: lesson03_data-cleaning.html
     - output: web,pdf
-      title: Lesson 2 - Exploratory data analysis
-      url: lesson02_exploratory-data-analysis
+      title: Lesson 4 - Random Forests Intro
+      url: lesson04_intro-to-random-forests.html
     - output: web,pdf
-      title: Lesson 3 - Data cleaning and feature engineering
-      url: lesson03_data-cleaning
+      title: Lesson 5 - Random Forest Deep Dive
+      url: lesson05_random-forest-deep-dive.html
     - output: web,pdf
-      title: Lesson 4 - Introduction to random forests
-      url: lesson04_intro-to-random-forests
-    - output: web,pdf
-      title: Lesson 5 - Random forest deep dive
-      url: lesson05_random-forest-deep-dive
-    - output: web,pdf
-      title: Lesson 6 - Model interpretability
-      url: lesson06_model-interpretation
+      title: Lesson 6 - Model Interpretability
+      url: lesson06_model-interpretation.html
     - output: web,pdf
       title: Lesson 7 - Classification
-      url: lesson07_classification
+      url: lesson07_classification.html
     - output: web,pdf
-      title: Lesson 8 - Group project
-      url: lesson08_group-project
+      title: Lesson 8 - Group Project
+      url: lesson08_group-project.html
     - output: web,pdf
       title: Lesson 9 - Overfitting
-      url: lesson09_overfitting
+      url: lesson09_overfitting.html
     - output: web,pdf
-      title: Lesson 10 - Neighbours and clusters
-      url: lesson10_clusters
+      title: Lesson 10 - Neighbours and Clusters
+      url: lesson10_clusters.html
     - output: web,pdf
-      title: Lesson 11 - Dimensions and visualisation
-      url: lesson11_visualisation
+      title: Lesson 11 - Dimensions
+      url: lesson11_visualisation.html
     - output: web,pdf
-      title: Lesson 12 - Introduction to NLP
-      url: lesson12_nlp-intro
+      title: Lesson 12 - NLP Introduction
+      url: lesson12_nlp-intro.html
     - output: web,pdf
       title: Lesson 13 - NLP with Deep Learning
-      url: lesson13_nlp-deep
+      url: lesson13_nlp-deep.html
     - output: web,pdf
-      title: Lesson 14 - Create an image dataset
-      url: lesson14_image-dataset
+      title: Lesson 14 - Create an Image Dataset
+      url: lesson14_image-dataset.html
     - output: web,pdf
-      title: Lesson 15 - Image classification with deep learning
-      url: lesson15_cv-deep
+      title: Lesson 15 - Image Classification
+      url: lesson15_cv-deep.html
     - output: web,pdf
-      title: Python primer
-      url: python-primer
+      title: 'Utils: Core library'
+      url: utils0_core.html
+    - output: web,pdf
+      title: 'Utils: Fastai Helper Functions'
+      url: utils1_structured.html
+    - output: web,pdf
+      title: 'Utils: Image Downloader'
+      url: utils2_image_downloader.html
     output: web
     title: dslectures
   output: web
