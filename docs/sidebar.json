@@ -1,7 +1,7 @@
 {
   "dslectures": {
     "Overview": "/",
-    "Lesson 0: Python Primer": "lesson00-python-primer.html",
+    "Lesson 0 - Python Primer": "lesson00_python-primer.html",
     "Lesson 1 - Pandas and Seaborn": "lesson01_intro-to-pandas.html",
     "Lesson 2 - Exploratory Data Analysis": "lesson02_exploratory-data-analysis.html",
     "Lesson 3 - Feature Engineering": "lesson03_data-cleaning.html",
@@ -17,8 +17,8 @@
     "Lesson 13 - NLP with Deep Learning": "lesson13_nlp-deep.html",
     "Lesson 14 - Create an Image Dataset": "lesson14_image-dataset.html",
     "Lesson 15 - Image Classification": "lesson15_cv-deep.html",
-    "Utils: Core library": "utils0_core.html",
-    "Utils: Fastai Helper Functions": "utils1_structured.html",
-    "Utils: Image Downloader": "utils2_image_downloader.html"
+    "Utils: Core library": "utils00_core.html",
+    "Utils: Fastai Helper Functions": "utils01_structured.html",
+    "Utils: Image Downloader": "utils02_image_downloader.html"
   }
 }

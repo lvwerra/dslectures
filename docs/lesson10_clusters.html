@@ -342,8 +342,8 @@ Based on that observation you decide that your flower is a <strong>Iris setosa</
 <li>Use odd number for k to avoid ties</li>
 <li>Voting can be weighted by distance</li>
 </ul>
-<h4 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h4><p>The <code>KNeighborsClassifier</code> interface is the same as the one we have already seen for the Decision Tree and Random Forest classifiers. When initializing the classifier one has to pass the number of neighbours <code>k</code> and can then use the known <code>.fit()</code> and <code>.predict()</code> procedure. We introduce the <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to study the behaviour of the classifier more closely. 
-{% include note.html content='The <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> function only works in two dimensions.' %}</p>
+<h4 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h4><p>The <code>KNeighborsClassifier</code> interface is the same as the one we have already seen for the Decision Tree and Random Forest classifiers. When initializing the classifier one has to pass the number of neighbours <code>k</code> and can then use the known <code>.fit()</code> and <code>.predict()</code> procedure. We introduce the <a href="/dslectures/utils00_core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to study the behaviour of the classifier more closely. 
+{% include note.html content='The <a href="/dslectures/utils00_core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> function only works in two dimensions.' %}</p>
 
 </div>
 </div>
@@ -435,7 +435,7 @@ Based on that observation you decide that your flower is a <strong>Iris setosa</
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Excercise-3">Excercise 3<a class="anchor-link" href="#Excercise-3"> </a></h3><p>Use the <a href="/dslectures/core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to plot the classifier boundaries with the following settings:</p>
+<h3 id="Excercise-3">Excercise 3<a class="anchor-link" href="#Excercise-3"> </a></h3><p>Use the <a href="/dslectures/utils00_core.html#plot_classifier_boundaries"><code>plot_classifier_boundaries</code></a> to plot the classifier boundaries with the following settings:</p>
 <ul>
 <li><code>RandomForestClassifier(n_estimators=1, max_depth=1)</code></li>
 <li><code>RandomForestClassifier(n_estimators=1, max_depth=2)</code> </li>

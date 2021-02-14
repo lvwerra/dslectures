@@ -10,8 +10,8 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: 'Lesson 0: Python Primer'
-      url: lesson00-python-primer.html
+      title: Lesson 0 - Python Primer
+      url: lesson00_python-primer.html
     - output: web,pdf
       title: Lesson 1 - Pandas and Seaborn
       url: lesson01_intro-to-pandas.html
@@ -59,13 +59,13 @@ entries:
       url: lesson15_cv-deep.html
     - output: web,pdf
       title: 'Utils: Core library'
-      url: utils0_core.html
+      url: utils00_core.html
     - output: web,pdf
       title: 'Utils: Fastai Helper Functions'
-      url: utils1_structured.html
+      url: utils01_structured.html
     - output: web,pdf
       title: 'Utils: Image Downloader'
-      url: utils2_image_downloader.html
+      url: utils02_image_downloader.html
     output: web
     title: dslectures
   output: web

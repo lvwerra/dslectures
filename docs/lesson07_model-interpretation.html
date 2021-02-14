@@ -2089,7 +2089,7 @@ OOB R^2: 0.823
 <blockquote><p>Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. (Taking logs means that errors in predicting expensive houses and cheap houses will affect the result equally.)</p>
 </blockquote>
 <p>How might you handle this? You may find NumPy's <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html">log function</a> to be useful here.
-Hint #3: You may find the <a href="/dslectures/core.html#convert_strings_to_categories"><code>convert_strings_to_categories</code></a> function from lesson 3 to be useful. You can import it from the <code>dslectures</code> library as follows</p>
+Hint #3: You may find the <a href="/dslectures/utils00_core.html#convert_strings_to_categories"><code>convert_strings_to_categories</code></a> function from lesson 3 to be useful. You can import it from the <code>dslectures</code> library as follows</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dslectures.core</span> <span class="kn">import</span> <span class="n">convert_strings_to_categories</span>
 </pre></div>
 <p>Hint #4: When you use the median to fill missing values in the training set, you should use the <em>same</em> median for the test set. See p.61 of <em>Hands-On Machine Learning with Scikit-Learn and TensorFlow</em> by A. Geron.</p>
