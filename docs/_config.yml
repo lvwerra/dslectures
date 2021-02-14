@@ -36,7 +36,6 @@ kramdown:
   syntax_highlighter: rouge
 markdown: kramdown
 output: web
-permalink: pretty
 plugins:
 - jekyll-remote-theme
 port: 4000
