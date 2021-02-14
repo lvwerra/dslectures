@@ -2,7 +2,7 @@
 > Welcome to the course materials for BTW2401 - Data Science and Visualisation!
 
 
-Here you can find the course materials for the Data Science course taught at the Bern University of Applied Sciences by Leandro von Werra in 2021.
+Here you can find the course materials for the Data Science course taught at the Bern University of Applied Sciences by Leandro von Werra in 2021. This course was originally co-developed with Lewis Tunstall.
 
 ## What is this thing called data science?
 
