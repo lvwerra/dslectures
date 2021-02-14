@@ -22,20 +22,20 @@ entries:
       title: Lesson 3 - Feature Engineering
       url: lesson03_data-cleaning.html
     - output: web,pdf
-      title: Lesson 4 - Random Forests Intro
-      url: lesson04_intro-to-random-forests.html
+      title: Lesson 4 - Group Project
+      url: lesson04_group-project.html
     - output: web,pdf
-      title: Lesson 5 - Random Forest Deep Dive
-      url: lesson05_random-forest-deep-dive.html
+      title: Lesson 5 - Random Forests Intro
+      url: lesson05_intro-to-random-forests.html
     - output: web,pdf
-      title: Lesson 6 - Model Interpretability
-      url: lesson06_model-interpretation.html
+      title: Lesson 6 - Random Forest Deep Dive
+      url: lesson06_random-forest-deep-dive.html
     - output: web,pdf
-      title: Lesson 7 - Classification
-      url: lesson07_classification.html
+      title: Lesson 7 - Model Interpretability
+      url: lesson07_model-interpretation.html
     - output: web,pdf
-      title: Lesson 8 - Group Project
-      url: lesson08_group-project.html
+      title: Lesson 8 - Classification
+      url: lesson08_classification.html
     - output: web,pdf
       title: Lesson 9 - Overfitting
       url: lesson09_overfitting.html
