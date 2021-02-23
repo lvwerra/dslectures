@@ -41,7 +41,7 @@ The module structure consists of classroom sessions, self-study tasks, and group
 
 | CW | Date | Topic | Links |
 | :--- | :--- | :--- | :--- |
-| 8 | 24.02 | Introduction to Data Science | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lvwerra/dslectures/master?urlpath=lab/tree/notebooks/lesson01_intro-to-pandas.ipynb) [![notebook](https://img.shields.io/static/v1?label=notebook&message=lesson01_intro-to-pandas.ipynb&color=red&logo=Jupyter)](https://raw.githubusercontent.com/lvwerra/dslectures/master/notebooks/lesson01_intro-to-pandas.ipynb) [![slides](https://img.shields.io/static/v1?label=slides&message=lesson01_intro-to-ds-and-ml.pdf&color=blue&logo=Google-drive)](https://drive.google.com/file/d/14bPRdbbf_CjDOfG8rBbSBQO-dDpxDj2G/view) |
+| 8 | 24.02 | Introduction to Data Science | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lvwerra/dslectures/master?urlpath=lab/tree/notebooks/lesson01_intro-to-pandas.ipynb) [![notebook](https://img.shields.io/static/v1?label=notebook&message=lesson01_intro-to-pandas.ipynb&color=red&logo=Jupyter)](https://raw.githubusercontent.com/lvwerra/dslectures/master/notebooks/lesson01_intro-to-pandas.ipynb) [![slides](https://img.shields.io/static/v1?label=slides&message=lesson01_intro-to-ds-and-ml.pdf&color=blue&logo=Google-drive)](https://drive.google.com/file/d/1H39nvBSNPhPeq1wWXhZEBn5K8c6wz1lP/view) |
 | 9 | 03.03 | Exploratory Data Analysis | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lvwerra/dslectures/master?urlpath=lab/tree/notebooks%2Flesson02_exploratory-data-analysis.ipynb) [![notebook](https://img.shields.io/static/v1?label=notebook&message=lesson02_exploratory-data-analysis.ipynb&color=red&logo=Jupyter)](https://raw.githubusercontent.com/lvwerra/dslectures/master/notebooks/lesson02_exploratory-data-analysis.ipynb) |
 | 10 | 10.03 | Feature Engineering | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lvwerra/dslectures/master?urlpath=lab/tree/notebooks%2Flesson03_data-cleaning.ipynb) [![notebook](https://img.shields.io/static/v1?label=notebook&message=lesson03_data-cleaning.ipynb&color=red&logo=Jupyter)](https://raw.githubusercontent.com/lvwerra/dslectures/master/notebooks/lesson03_data-cleaning.ipynb) |
 | 11 | 17.03 | **Define group projects** | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lvwerra/dslectures/master?urlpath=lab/tree/notebooks%2Flesson04_group-project.ipynb) [![notebook](https://img.shields.io/static/v1?label=notebook&message=lesson04_group-project.ipynb&color=red&logo=Jupyter)](https://raw.githubusercontent.com/lvwerra/dslectures/master/notebooks/lesson04_group-project.ipynb) |
@@ -106,7 +106,7 @@ To install JupyterLab (a more advanced environment than Jupyter notebooks) run:
 ```bash
 pip install jupyterlab
 ```
-Then make sure you download all course material from the [GitHub repository](https://github.com/lewtun/dslectures) or just the missing notebooks. In general you will need to copy all materials, since some resources such as images are not self-contained in the notebooks.
+Then make sure you download all course material from the [GitHub repository](https://github.com/lvwerra/dslectures) or just the missing notebooks. In general you will need to copy all materials, since some resources such as images are not self-contained in the notebooks.
 
 Finally, to start JuypterLab run:
 ```bash
