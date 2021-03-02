@@ -36,7 +36,7 @@ nb_path: "notebooks/utils02_image_downloader.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install fastai --no-cache-dir -qq
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -200,8 +200,11 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <span class="sd">    given an `img_tuple` that contains `(fname, url)` of an image to download.</span>
 <span class="sd">    `i` is just an iteration number `int`. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">img_url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span>
-    <span class="n">download_url</span><span class="p">(</span><span class="n">img_url</span><span class="p">,</span> <span class="n">label_path</span><span class="o">/</span><span class="n">fname</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">img_url</span><span class="p">[</span><span class="o">-</span><span class="mi">30</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="n">img_url</span><span class="p">,</span> <span class="n">label_path</span><span class="o">/</span><span class="n">fname</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not download image </span><span class="si">{img_url}</span><span class="s2">&quot;</span><span class="p">)</span>
     
 <span class="k">def</span> <span class="nf">_search_url</span><span class="p">(</span><span class="n">search_term</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;&gt;400*300&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="s2">&quot;Return a Google Images Search URL for a given search term.&quot;</span>
@@ -277,7 +280,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>597 image links found on Google image search for the query &#34;cat&#34;.
+<pre>562 image links found on Google image search for the query &#34;cat&#34;.
 </pre>
 </div>
 </div>
@@ -294,7 +297,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>597 images now available in class cat.
+<pre>567 images now available in class cat.
 </pre>
 </div>
 </div>
@@ -327,7 +330,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>586 image links found on Google image search for the query &#34;cat funny&#34;.
+<pre>525 image links found on Google image search for the query &#34;cat funny&#34;.
 </pre>
 </div>
 </div>
@@ -344,7 +347,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1182 images now available in class cat.
+<pre>1091 images now available in class cat.
 </pre>
 </div>
 </div>
@@ -377,7 +380,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>643 image links found on Google image search for the query &#34;dog&#34;.
+<pre>490 image links found on Google image search for the query &#34;dog&#34;.
 </pre>
 </div>
 </div>
@@ -394,7 +397,7 @@ To avoid this problem you can invoke Python with &#39;-m pip&#39; instead of run
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>643 images now available in class dog.
+<pre>487 images now available in class dog.
 </pre>
 </div>
 </div>

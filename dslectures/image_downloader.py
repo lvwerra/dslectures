@@ -98,8 +98,11 @@ def _download_single_image(label_path:Path, img_url:tuple, i:int, timeout:int=4)
     given an `img_tuple` that contains `(fname, url)` of an image to download.
     `i` is just an iteration number `int`.
     """
-    fname = img_url.split('%')[1].split('&')[0]+'.png'
-    download_url(img_url, label_path/fname, timeout=timeout)
+    fname = img_url[-30:]+'.png'
+    try:
+        download_url(img_url, label_path/fname, timeout=timeout)
+    except:
+        print(f"Could not download image {img_url}")
 
 def _search_url(search_term:str, size:str='>400*300', format:str='jpg') -> str:
     "Return a Google Images Search URL for a given search term."
