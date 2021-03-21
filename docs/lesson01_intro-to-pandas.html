@@ -1358,7 +1358,7 @@ Name: ocean_proximity, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;housing_median_age&#39;</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">housing_data</span><span class="p">[</span><span class="s1">&#39;housing_median_age&#39;</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -1539,9 +1539,9 @@ Name: median_house_value, dtype: float64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><strong>You should know</strong></p>
-<p>Whenever you hear the word "correlation", most people are usually referring to the <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"><em>standard correlation coefficient</em></a> $\nho_{X,Y}$ (also called <em>Pearson's r</em>) between a pair of random variables $X$ and $Y$:</p>
+<p>Whenever you hear the word "correlation", most people are usually referring to the <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"><em>standard correlation coefficient</em></a> $\rho_{X,Y}$ (also called <em>Pearson's r</em>) between a pair of random variables $X$ and $Y$:</p>
 <p>{% raw %}
-$$ \nho_{X,Y} = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y} \,,$$
+$$ \rho_{X,Y} = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y}$$
 {% endraw %}</p>
 <p>where $\sigma_{X,Y}$ is the standard deviation of $X,Y$ and $\mathrm{cov}$ is the covariance. This coefficient ranges from -1 to 1; when it is close to 1 (-1) it means there is a strong positive (negative) correlation. When the coefficient is close to 0 it means there is no linear correlation. The figure below show various plots along with the correlation coefficient between their horizontal and vertical axes.</p>
 <p><br></p>
@@ -1616,7 +1616,7 @@ $$ \nho_{X,Y} = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y} \,,$$
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="s1">&#39;median_income&#39;</span><span class="p">,</span> <span class="s1">&#39;median_house_value&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">housing_data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;median_income&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;median_house_value&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">housing_data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
