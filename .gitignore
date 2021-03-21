@@ -143,3 +143,5 @@ checklink/cookies.txt
 data/
 
 notebooks/group-projects/
+
+notebooks/__spotify.ipynb
