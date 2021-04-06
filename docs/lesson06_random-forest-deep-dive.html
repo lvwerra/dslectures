@@ -31,7 +31,8 @@ nb_path: "notebooks/lesson06_random-forest-deep-dive.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://mybinder.org/v2/gh/lewtun/dslectures/master?urlpath=lab/tree/notebooks%2Flesson05_random-forest-deep-dive.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></p>
+<p><a href="https://mybinder.org/v2/gh/lewtun/dslectures/master?urlpath=lab/tree/notebooks%2Flesson05_random-forest-deep-dive.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+<a href="https://drive.google.com/open?id=10TDYyUqEDB7oa6ejRy8x_ylUF84Ta2Te"><img src="https://img.shields.io/static/v1?label=slides&amp;message=2021-lesson06.pdf&amp;color=blue&amp;logo=Google-drive" alt="slides"></a></p>
 
 </div>
 </div>
@@ -261,14 +262,13 @@ nb_path: "notebooks/lesson06_random-forest-deep-dive.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>housing.csv                  keep_cols.npy
-housing_addresses.csv        submission.csv
-housing_columns_to_keep.npy  submission_mean.csv
-housing_gmaps_data_raw.csv   test.csv
-housing_merged.csv           train.csv
-housing_model.pkl            uc
-housing_processed.csv        word2vec-google-news-300.pkl
-imdb.csv
+<pre>autos.csv                    housing_gmaps_data_raw.csv
+<span class="ansi-cyan-intense-fg ansi-bold">car-challenge</span>                housing_merged.csv
+<span class="ansi-cyan-intense-fg ansi-bold">cats_vs_dogs</span>                 housing_processed.csv
+churn.csv                    imdb.csv
+fine_tuned.pth               <span class="ansi-cyan-intense-fg ansi-bold">spotify</span>
+housing.csv                  word2vec-google-news-300.pkl
+housing_addresses.csv
 </pre>
 </div>
 </div>
@@ -537,18 +537,15 @@ imdb.csv
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-d768f88d541e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span> y_train<span class="ansi-blue-fg">)</span>
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion=&#39;mse&#39;,
-                      max_depth=None, max_features=&#39;auto&#39;, max_leaf_nodes=None,
-                      max_samples=None, min_impurity_decrease=0.0,
-                      min_impurity_split=None, min_samples_leaf=1,
-                      min_samples_split=2, min_weight_fraction_leaf=0.0,
-                      n_estimators=10, n_jobs=-1, oob_score=False,
-                      random_state=42, verbose=0, warm_start=False)</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;X_train&#39; is not defined</pre>
 </div>
-
 </div>
 
 </div>
