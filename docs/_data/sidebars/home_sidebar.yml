@@ -31,7 +31,7 @@ entries:
       title: Lesson 6 - Random Forest Deep Dive
       url: lesson06_random-forest-deep-dive.html
     - output: web,pdf
-      title: Lesson 7 - Model Interpretability
+      title: Lesson 7 - Model interpretability
       url: lesson07_model-interpretation.html
     - output: web,pdf
       title: Lesson 8 - Classification
