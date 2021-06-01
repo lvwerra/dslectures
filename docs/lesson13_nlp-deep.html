@@ -31,7 +31,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/lewtun/dslectures/blob/master/notebooks/lesson13_nlp-deep.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<p><a href="https://colab.research.google.com/github/lewtun/lvwerra/blob/master/notebooks/lesson13_nlp-deep.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a><a href="https://drive.google.com/open?id=1glpOcwvG0vyuRvTo0nmOaXDqOfVmADy9"><img src="https://img.shields.io/static/v1?label=slides&amp;message=2021-lesson13.pdf&amp;color=blue&amp;logo=Google-drive" alt="slides"></a></p>
 
 </div>
 </div>
@@ -148,6 +148,13 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we need to make sure that the Colab notebook has all the right libraries installed. We use the <a href="https://drive.google.com/file/d/1pDime9zgq66wDXgMlcS_CYrcrFb_bGxI/view">r.txt</a> file that contains all the necessary libraries. To upload it use the folder icon on the left in colab. After you run the following step make sure to restart the notebook with <code>Runtime -&gt; Restart Runtime</code>.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -155,7 +162,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install dslectures
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install -r r.txt
 </pre></div>
 
     </div>
@@ -242,13 +249,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[PosixPath(&#39;/storage/data/imdb/README&#39;),
- PosixPath(&#39;/storage/data/imdb/tmp_lm&#39;),
- PosixPath(&#39;/storage/data/imdb/imdb.vocab&#39;),
- PosixPath(&#39;/storage/data/imdb/tmp_clas&#39;),
- PosixPath(&#39;/storage/data/imdb/test&#39;),
- PosixPath(&#39;/storage/data/imdb/train&#39;),
- PosixPath(&#39;/storage/data/imdb/unsup&#39;)]</pre>
+<pre>(#8) [Path(&#39;/Users/leandro/.fastai/data/imdb/test&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/tmp_clas&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/imdb.vocab&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/unsup&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/README&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/tmp_lm&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/data_lm.pkl&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train&#39;)]</pre>
 </div>
 
 </div>
@@ -277,6 +278,22 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(#4) [Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/pos&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/unsupBow.feat&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/labeledBow.feat&#39;)]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -312,16 +329,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[PosixPath(&#39;/storage/data/imdb/train/neg/573_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/4084_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/10475_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/1830_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/3070_2.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/9556_4.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/6659_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/6035_1.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/6056_2.txt&#39;),
- PosixPath(&#39;/storage/data/imdb/train/neg/1579_1.txt&#39;)]</pre>
+<pre>(#10) [Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/1821_4.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/10402_1.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/1062_4.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/9056_1.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/5392_3.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/2682_3.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/3351_4.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/399_2.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/10447_1.txt&#39;),Path(&#39;/Users/leandro/.fastai/data/imdb/train/neg/10096_1.txt&#39;)]</pre>
 </div>
 
 </div>
@@ -385,6 +393,30 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -406,6 +438,22 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>60000</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -450,7 +498,17 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
  &#39;xxup&#39;,
  &#39;xxrep&#39;,
  &#39;xxwrep&#39;,
- &#39;the&#39;]</pre>
+ &#39;the&#39;,
+ &#39;.&#39;,
+ &#39;,&#39;,
+ &#39;and&#39;,
+ &#39;a&#39;,
+ &#39;of&#39;,
+ &#39;to&#39;,
+ &#39;is&#39;,
+ &#39;it&#39;,
+ &#39;in&#39;,
+ &#39;i&#39;]</pre>
 </div>
 
 </div>
@@ -497,11 +555,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Text xxbos xxmaj while the design and locations and photography are strong assets in this film ; it is a turgid and melodramatic affair which demonstrates the limits of cinema to convey truth . 
- 
-  xxmaj the case is the use of the soundtrack music : a mix of xxmaj gustav xxmaj mahler and xxmaj andrew xxmaj lloyd - xxmaj webber that plays constantly and loudly , and would have made xxmaj max xxmaj steiner grimace at its over use as it instructs the audience how difficult ; how ecstatic ; how tortured it is to be an artist . xxmaj and then it really counts the story xxunk the details at the end . 
- 
-  xxmaj this heightened and kitsch exploitation of emotions was once well ridiculed by xxmaj peter xxmaj ackroyd about a xxmaj yukio xxmaj mishima book : xxmaj this is not writing , this is xxmaj barbara xxmaj cartland . xxmaj precisely the same critique can be made of this film : a deceptive , mawkish vanity project .</pre>
+<pre>Text [    2     5  1869     5 ...    12     5 17310    10]</pre>
 </div>
 
 </div>
@@ -550,23 +604,23 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
   <tbody>
     <tr>
       <td>0</td>
-      <td>xxmaj max xxmaj steiner grimace at its over use as it instructs the audience how difficult ; how ecstatic ; how tortured it is to be an artist . xxmaj and then it really counts the story xxunk the details at the end . \n \n  xxmaj this heightened and kitsch exploitation of emotions was once well ridiculed by xxmaj peter xxmaj ackroyd about a xxmaj yukio xxmaj mishima</td>
+      <td>, but one gets the impression in watching the film that it was not pulled off as well as it could have been . xxmaj the fact that it is cluttered by a rather uninteresting subplot and mostly uninteresting kidnappers really muddles things . xxmaj the movie is worth a xxunk if for nothing more than entertaining performances by xxmaj rickman , xxmaj thompson , and xxmaj holbrook . xxbos</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>call it horror . xxmaj there is too much talking , you will get bloodthirsty after watching it xxbos i 'd liked the xxmaj takashi xxmaj miike films i 'd seen so far , but i found this pretty disappointing . i 'd bought it , but i wo n't be keeping it . \n \n  i saw it on the xxmaj xxunk xxup dvd , which has just</td>
+      <td>gosling 's smile or contrived moralizing . xxmaj after the first 45 minutes however , the script blossomed into a watch - able albeit not completely entertaining or thought - provoking . xxmaj the highlights certainly include both xxmaj gosling and xxmaj morse 's acting , xxmaj gosling being an up - and - coming star , and xxmaj morse being an extremely well - established character actor with a</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>xxmaj gable 's laughable playing of an xxmaj irish patriot in xxmaj parnell . \n \n  xxmaj it 's inconceivable that xxmaj bergman would choose both this movie and its director over a lucrative xxmaj hollywood career where she could choose among the finest scripts and directors being offered at that time . xxmaj to begin with , there was no script to work with except a few notes</td>
+      <td>. xxmaj their glares and facial ticks would not cut any mustard with the boys from the hood . xxmaj unfortunately for all good people , these xxmaj charmed boys were sent to xxmaj xxunk 's xxmaj reform xxmaj school for the warlocks that could n't get into xxmaj harry xxmaj potter 's class . \n \n  xxmaj so what was the movie all about ? xxmaj three teenagers</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>worst of the lot ! xxmaj it does not have the feel of \n \n  the original or 2nd , xxmaj the enemy 's look stupid and the levels are \n \n  even worse . xxmaj it does not look realistic anymore ! i did not enjoy his game unlike the last two , the first had great \n \n  background music and the 2nd was not</td>
+      <td>to be ) is around , and a string pulling bed sheets up and down . xxmaj oooh , can you feel the chills ? xxmaj the xxup dvd quality is that of a xxup vhs transfer ( which actually helps the film more than hurts it ) . xxmaj the dubbing is below even the lowest " bad xxmaj italian movie " standards and i gave it one star</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>ever made , ever . xxmaj unfortunately my worst fears were confirmed &amp; one has to say that xxmaj curse of the xxmaj wolf is a truly horrible film in every way , both conceptually &amp; technically . xxmaj curse of the xxmaj wolf is the sort of film where the low budget dictates what happens &amp; the script rather than the script dictating the budget . xxmaj you get</td>
+      <td>as to xxmaj jack xxmaj lemmon , he plays his part so straight , he can hardly dip and glide when dancing . xxmaj and as mentioned , xxmaj dyan xxmaj cannon is outstandingly attractive as another swindler sailing with her mother who thinks xxmaj walter is rich , while he thinks she is rich . xxmaj elaine xxmaj stritch plays xxmaj dyan 's mother , another retread from the</td>
     </tr>
   </tbody>
 </table>
@@ -610,7 +664,7 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([   2,    5,  154,    9, 1682,   12, 1854,   12, 1352,   39])</pre>
+<pre>array([   2,    5, 1869,    5, 9777,  205,    5, 3608,    5, 4537])</pre>
 </div>
 
 </div>
@@ -640,6 +694,29 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>xxbos
+xxmaj
+alan
+xxmaj
+rickman
+&amp;
+xxmaj
+emma
+xxmaj
+thompson
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -674,6 +751,29 @@ nb_path: "notebooks/lesson13_nlp-deep.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Downloading https://s3.amazonaws.com/fast-ai-modelzoo/wt103-fwd.tgz
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
 </div>
 </div>
 
