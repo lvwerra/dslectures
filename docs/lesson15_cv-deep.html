@@ -31,7 +31,7 @@ nb_path: "notebooks/lesson15_cv-deep.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/lewtun/dslectures/blob/master/notebooks/lesson15_cv-deep.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<p><a href="https://colab.research.google.com/github/lewtun/dslectures/blob/master/notebooks/lesson15_cv-deep.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a><a href="https://drive.google.com/open?id=19sr3wfcAJUrDKgzXMhsoNdSy1cfD0I-5"><img src="https://img.shields.io/static/v1?label=slides&amp;message=2021-lesson15.pdf&amp;color=blue&amp;logo=Google-drive" alt="slides"></a></p>
 
 </div>
 </div>
@@ -89,8 +89,13 @@ nb_path: "notebooks/lesson15_cv-deep.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install-fastai-library">Install fastai library<a class="anchor-link" href="#Install-fastai-library"> </a></h2><p>First we need to install the fastai library since we need some of its helper functions to download images and then also visualise the downloaded images.
-{% include note.html content='This step might take a few minutes.' %}</p>
+<h2 id="Import">Import<a class="anchor-link" href="#Import"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we need to make sure that the Colab notebook has all the right libraries installed. We use the <a href="https://drive.google.com/file/d/1pDime9zgq66wDXgMlcS_CYrcrFb_bGxI/view">r.txt</a> file that contains all the necessary libraries. To upload it use the folder icon on the left in colab. After you run the following step make sure to restart the notebook with <code>Runtime -&gt; Restart Runtime</code>.</p>
 
 </div>
 </div>
@@ -102,7 +107,7 @@ nb_path: "notebooks/lesson15_cv-deep.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install -r r.txt
 </pre></div>
 
     </div>
@@ -112,12 +117,6 @@ nb_path: "notebooks/lesson15_cv-deep.ipynb"
 </div>
     {% endraw %}
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Import">Import<a class="anchor-link" href="#Import"> </a></h2>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then we can import the <a href="/dslectures/utils02_image_downloader.html#ImageDownloader"><code>ImageDownloader</code></a> and the fastai helper functions.</p>
@@ -125,23 +124,6 @@ nb_path: "notebooks/lesson15_cv-deep.ipynb"
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># !pip install --upgrade dslectures</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
